@@ -89,19 +89,22 @@
   text-transform: lowercase;
   padding: 2px 13px 4px;
   text-align: center;
+  outline: none;
+  border: 1px solid transparent;
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--theme-menu-button);
-}
-
-.header__theme-menu-button:focus {
-  outline: 0;
-  border-bottom: 1px solid;
+.header__theme-menu-button_active {
+  border: 1px solid var(--theme-menu-button);
+  pointer-events: none; 
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--theme-menu-button);
+  outline: 0;
+  border-bottom: 1px solid var(--theme-menu-button);
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  border: 1px solid var(--button-color-hover);
 }
 
 .header__title {
