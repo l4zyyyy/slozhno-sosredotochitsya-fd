@@ -26,6 +26,7 @@
   --links-focus-outline-color: #F1B2CE;
   --regular-font-size: 18px;
   --background-image: url(../images/cover-image-dark.png);
+  --background-color-fallback: #000028;
 }
 
 .theme-dark .header__rec {

@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-image: url(../images/cover-image-light.png);
+  --background-color-fallback: #FFF1F7;
   --accent-color: #FF8DCB;
   --paragraph-outline-color: #353430;
   --theme-menu-button: #353430;
@@ -32,6 +33,7 @@
   :root {
     /* Дублируем переменные светлой темы */
     --background-image: url(../images/cover-image-light.png);
+    --background-color-fallback: #FFF1F7;
     --accent-color: #FF8DCB;
     --paragraph-outline-color: #353430;
     --theme-menu-button: #353430;

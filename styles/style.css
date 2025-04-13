@@ -2,18 +2,19 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
+  background-color: var(--background-color-fallback);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-.header::before,
-.header::after {
+.decorated-zone::before,
+.decorated-zone::after {
   content: '';
   position: absolute;
-  width: 30px;
+  width: 25px;
   height: 30px;
-  border: 2px solid var(--corner-color);
+  border: 1px solid var(--corner-color);
 }
 
 .header::before {
@@ -178,7 +179,7 @@
   margin-block-end: 20px;
 }
 
-.column {
+.text-blocks-decorations {
   margin-block-start: 20px;
 }
 .paragraph-decor:last-child {
@@ -221,6 +222,7 @@
   grid-template-columns: 1fr min-content 1fr;
   position: relative;
   margin: 0;
+  height: 100vh;
   min-block-size: 668px;
   margin-block-start: 40px;
 }
@@ -230,15 +232,6 @@
   display: grid;
   align-items: center;
   justify-content: center;
-}
-
-.footer::before,
-.footer::after {
-  content: '';
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--corner-color);
 }
 
 .footer::before {
@@ -300,8 +293,8 @@
     display: flex;
     margin-block-start: 162px;
     margin-inline-end: 20px;
-    block-size: 117px;
-    inline-size: 364px;
+    max-width: 364px;
+    width: 100%;
     justify-self: end;
   }
 
@@ -321,7 +314,6 @@
   .main {
     margin-inline-start: 20px;
     margin-inline-end: 20px;
-    min-block-size: 768px;
     margin-block-start: 60px;
   }
 
@@ -329,7 +321,7 @@
     margin-block-start: 80px;
   }
 
-  .column {
+  .text-blocks-decorations {
     margin-block-start: 20px;
   }
 
@@ -396,7 +388,8 @@
 
   .footer-title {
     min-block-size: 1024px;
-    min-inline-size: 768px;
+    max-width: 768px;
+    width: 100%;
   }
 
   .footer::before {
@@ -434,7 +427,8 @@
   }
 
   .subtitle {
-    inline-size: 491px;
+    max-width: 491px;
+    width: 100%;
     block-size: 71px;
     margin-block-start: 114px;
   }
@@ -472,20 +466,4 @@
     min-inline-size: 1024px;
     font-size: 157px;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-
-  .header__theme-menu-button_type_dark:active {
-    outline: 1px solid var(--theme-menu-button);
-  }
-
-}
-
-@media (prefers-color-scheme: light) {
-
-  .header__theme-menu-button_type_light:active {
-    outline: 1px solid var(--theme-menu-button);
-  }
-  
 }
