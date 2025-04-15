@@ -81,7 +81,6 @@
 .header__theme-menu-button {
   color: var(--theme-menu-button);
   background-color: transparent;
-  border: none;
   font-family: var(--main-font);
   font-size: var(--regular-font-size);
   font-weight: var(--normal-font-weight);
@@ -95,7 +94,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--theme-menu-button);
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .header__theme-menu-button:focus-visible {
